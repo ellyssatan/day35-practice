@@ -1,0 +1,11 @@
+<form [formGroup]="form" (ngSubmit)="doSearch()">
+    <mat-form-field appearance="fill" class="fill-row">
+        <mat-label>Search Boardgame</mat-label>
+        <input matInput formControlName="name">
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary"
+            [disabled]="form.invalid">
+        <mat-icon>search</mat-icon>
+        <span>Search</span>
+    </button>
+</form>
